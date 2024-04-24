@@ -8,7 +8,7 @@ var mongoose = require("mongoose")
 
 const app = express()
 const path = require('path');
-const port = process.env.PORT;
+const port = process.env.PORT || 4000;
 
 mongoose.connect(process.env.MONGODB_URI , {
   
