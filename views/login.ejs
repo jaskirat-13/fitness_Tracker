@@ -12,10 +12,66 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap"
     rel="stylesheet">
+    <style>
+        .navbar {
+        width: 100%;
+        background-color: hsl(0, 0%, 100%);
+        padding: 15px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #000000;
+        top: 0; /* Make it fixed to the top */
+        z-index: 1000; /* Ensure it's above other content */
+      }
+       .navbar-brand {
+        font-weight: bold;
+        font-size:   35px ;
+        font-family: 'Montserrat', sans-serif;
+       }
+       .navbar ul {
+        list-style: none;
+        display: flex;
+       }
+       .navbar ul li {
+        margin-right: 30px;
+        margin-top: 20px;
+       }
+       .navbar ul li a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        text-decoration: none;
+        color: #000000;
+        transition: color 0.3s;
+        padding: 13px 8px;
+       }
+       .navbar ul li a:hover {
+        color: #ffc107;
+       }
+       .btn-signin {
+        background-color: rgb(1, 86, 1);
+        color: #fff;
+        font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        border: none;
+        padding: 15px 35px;
+        border-radius: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+       }
+       .btn-signin:hover {
+        background-color: #FFEB3B;
+       }
+       .container{
+        padding-top: 100px; /* Adjust content to be below the fixed navbar */
+       }
+    </style>
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Navigation Bar 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">
@@ -35,7 +91,22 @@
         </div>
     </div>
 </nav>
-    
+-->
+
+<section>
+    <div class="navbar">
+      <div class="navbar-brand">FitFusion<span style="color: orange;">.</span></div>
+      <ul>
+          <li><a href="/index">Home</a></li>
+          <li><a href="/index">About Us</a></li>
+          <li><a href="/index">All Courses</a></li>
+          <li><a href="#">Subscription</a></li>
+          <li><a href="/index">Contact</a></li>
+      </ul>
+      <button class="btn-signin">Sign In</button>
+  </div>
+  </section>
+
     <section class="container2">
         <div class="row">
             <!-- Contact Information -->
