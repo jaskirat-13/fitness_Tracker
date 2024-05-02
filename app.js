@@ -2,11 +2,11 @@ if (process.env.NODE_ENV != "production") {
   require('dotenv').config();
 }
 
-const express = require('express')
-var bodyParser = require("body-parser")
-var mongoose = require("mongoose")
+const express = require('express');
+var bodyParser = require("body-parser");
+var mongoose = require("mongoose");
 
-const app = express()
+const app = express();
 const path = require('path');
 const port = process.env.PORT || 4000;
 
@@ -48,7 +48,6 @@ app.get('/index', function (req, res) {
 app.post("/register", async (req, res) => {
   try {
     const { name, email, password, plan } = req.body;
-
     if (!name || !email || !password || !plan) {
       return res.status(400).send("Please provide name, email, password, and select plan");
     }
@@ -61,7 +60,7 @@ app.post("/register", async (req, res) => {
     });
 
     await registrationData.save();
-    // Redirect to success page upon successful registration
+
     res.redirect("/success");
   } catch (error) {
     console.error(error);
